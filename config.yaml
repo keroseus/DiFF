@@ -1,0 +1,35 @@
+# Public MMBody template. Dataset files are intentionally not included.
+pretrained_path: null
+backbone_name: 'PointKANFlowMatcher'
+kan_use: true
+device: 'cuda'
+
+epochs: 200
+batch_size: 16
+learning_rate: 0.0001
+lr_scheduler: 'cosine'
+min_learning_rate: 0.0
+lr_adjust_epoch: 5
+# Retained for compatibility with the training configuration.
+batch_print_interval: 50
+checkpoint_save_interval: 5
+scheduler_gamma: 0.75
+noise_coefficient: 0.01
+
+# Set to false to skip validation and avoid loading the validation partition.
+validate_each_epoch: false
+validation_interval: 5
+val_batch_size: 16
+val_sample_to_num_points: true
+test_batch_size: 1
+run_name: 'pointkan_mmbody_example'
+
+num_points: 512
+dataset_name: 'mmbody'
+dataset_path: './data/mmbody'
+frame_rate: 30.0
+train_partition: 'train'
+train_dataset_path: './data/mmbody'
+val_partition: 'val'
+test_partition: 'test'
+eval_steps: 10

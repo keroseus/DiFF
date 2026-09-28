@@ -1,0 +1,35 @@
+__pycache__/
+*.py[cod]
+*.log
+*.csv
+*.png
+*.jpg
+*.jpeg
+*.mp4
+.idea/
+.DS_Store
+
+# Local data and generated training artifacts
+/data/
+/ckpt/
+*.pth
+*.pt
+*.ckpt
+/runs/
+/wandb/
+
+# Credentials and machine-specific settings
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.p12
+*.pfx
+config.local.yaml
+config.local.yml
+
+# Local assistant/editor state
+/.agents/
+/.codex/
+.vscode/

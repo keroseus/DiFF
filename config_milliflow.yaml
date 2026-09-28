@@ -1,0 +1,36 @@
+# Public MilliFlow template. Dataset files are intentionally not included.
+pretrained_path: null
+backbone_name: 'PointKANFlowMatcher'
+kan_use: true
+device: 'cuda'
+
+epochs: 200
+batch_size: 32
+learning_rate: 0.0001
+lr_scheduler: 'cosine'
+min_learning_rate: 0.0
+lr_adjust_epoch: 5
+scheduler_gamma: 0.75
+noise_coefficient: 0.01
+
+validate_each_epoch: false
+validation_interval: 5
+# Training-time validation samples val frames to num_points and batches them.
+val_batch_size: 16
+val_sample_to_num_points: true
+# Final raw test evaluation is always one frame per batch.
+test_batch_size: 1
+run_name: 'pointkan_milliflow_example'
+
+num_points: 128
+dataset_name: 'milliflow'
+dataset_path: './data/milliflow/data'
+train_partition: 'train'
+train_dataset_path: './data/milliflow/data'
+val_partition: 'val'
+test_partition: 'test'
+eval_steps: 10
+
+# Source-code MilliFlow KNN setting.
+feature_kneighbors: 6
+correlation_kneighbors: 4

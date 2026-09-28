@@ -1,0 +1,9 @@
+numpy
+PyYAML
+scipy
+timm
+torch
+matplotlib
+tqdm
+triton
+ujson
