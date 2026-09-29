@@ -1,8 +1,8 @@
-# HumanMotionFlowEstimate
+# DiFF: Doppler-informed Flow Matching for Human Motion Flow
 
-Point-cloud scene-flow estimation for human radar data. The implementation
-combines a PointKAN feature encoder, a flow-matching velocity field, and an
-optional Doppler motion prior.
+Perceiving human motion via privacy-preserving **4D millimeter-wave (mmWave) radar** is critical for next-generation human-robot interaction (HRI), where point cloud scene flow serves as a foundational motion representation. Yet the extreme sparsity and noise of 4D radar point clouds make non-rigid **motion flow** estimation severely ill-posed--a challenge that existing rigid-centric methods and prior works fail to adequately address, largely because they neglect the rich Doppler velocity cues inherent in 4D radar. We propose **DiFF**, a generative framework that marries **Doppler-informed motion priors** with a **Kolmogorov-Arnold Network (KAN)-based conditional flow matching model**. At its core, a KAN-attention mechanism enables expressive feature extraction, while a prior-guided generative process harnesses Doppler cues to regularize the ill-posed solution space.
+
+![DiFF pipeline](assets/pipeline2x.png)
 
 ## Contents
 
